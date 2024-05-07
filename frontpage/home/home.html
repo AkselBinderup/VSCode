@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#">Hjem</a></li>
+          <li><a href="#">Opret</a></li>
+          <li><a href="#">Noter</a></li>
+        </ul>
+
+        <button id="create-recipe-button">
+            Opret opskrift
+            <span class="material-symbols-outlined">
+                add_circle
+                </span>
+        </button>
+        <div id="recipe-form" style="display: none;">
+            <input type="text" id="recipe-name" placeholder="Navn på opskrift">
+            <textarea id="recipe-ingredients" placeholder="Ingredienser (en per linje)"></textarea>
+            <textarea id="recipe-instructions" placeholder="Instruktioner (en per linje)"></textarea>
+    
+            <button id="submit-recipe-button">Submit</button>
+        </div>
+        <div id="container" style="display:none;"></div>
+        <div id ="recipe" style="display: none;"></div>
+        <div id="recipe-container"></div>
+        <a href="#" class="logo">
+            <span class="material-symbols-outlined">
+                lunch_dining
+              </span>
+        </a>
+</nav>
+<div class="container-container">
+    <div class="container">
+        <div class ="header">
+            <h2>Favoritter</h2>
+        </div>
+        <ul>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2>Opskrifter</h2>
+            </div>
+        <form class="search-form">
+            <span class="search-icon material-symbols-outlined">
+                search
+                </span>
+            <input 
+            type="text" 
+            id="search-box" 
+            name="query" 
+            placeholder="Find opskrifter..." 
+            oninput="filterList()" 
+            autocomplete="off">
+        </form>
+        <ul id="searchResults"></ul>
+    </div>
+    <div class = "container">
+        <div class ="header">
+            <h2>Seneste Opskrifter</h2>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="JS/home.js"></script>    
+<script src="JS/homeDB.js"></script>
+</body>
+</html>
